@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_bar_layout"
+        android:background="@color/black"
+        >
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="42dp"
+            android:id="@+id/logout_btn"
+            android:src="@drawable/baseline_logout_24"
+            android:layout_marginLeft="10dp"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:layout_centerVertical="true"
+            app:tint="@color/white"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Milkman App"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:background="@color/black"
+        />
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="42dp"
+            android:id="@+id/done_btn"
+            android:src="@drawable/baseline_done_24"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            app:tint="@color/white"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="1dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginVertical="15dp"
+        android:backgroundTint="@color/white"
+        android:id="@+id/price_layout"
+        android:layout_below="@+id/title_bar_layout"
+        >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/current_price_label"
+        android:text="@string/milk_price_per_ltr"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:paddingLeft="100dp"
+        />
+
+        <EditText
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/price_field"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/input_layout"
+        android:layout_below="@+id/price_layout"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/quantity_layout"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_marginVertical="2dp"
+            android:backgroundTint="@color/white"
+        >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/first_label"
+                android:text="Enter Milk quantity :"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingBottom="5dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/quantity_field"
+                android:hint="Quantity (ml)"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:padding="12dp"
+                android:background="@drawable/dark_round_corner"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:id="@+id/second_label"
+                android:text="@string/choose_id_number"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingTop="5dp"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+                    android:background="@drawable/dark_round_corner"
+                    android:padding="12dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/date_layout"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/third_label"
+                    android:text="Date : "
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:paddingTop="5dp"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:hint="DD/MM/YYYY"
+                    android:textColor="@color/black"
+                    android:id="@+id/editdate"
+                    android:focusable="false"
+                    android:ems="15">
+
+                </EditText>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="150dp"
+                android:layout_height="64dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/view_btn"
+                android:text="View Data"
+                android:layout_marginTop="12dp"
+                android:textSize="16sp"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="150dp"
+                android:layout_height="64dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/change_price_btn"
+                android:text="Change Price"
+                android:layout_marginTop="12dp"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
